@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import '../styles/App.css'
 
 const NavComponent = () => {
   return (
@@ -11,6 +12,7 @@ const NavComponent = () => {
             <li><Link to="">About</Link></li>
             <li><Link to="">Contact</Link></li>
         </ul>
+        <p><a href="mailto:'angarcaz93@gmail.com'">angarcaz93@gmail.com</a></p>
     </nav>
   )
 }
