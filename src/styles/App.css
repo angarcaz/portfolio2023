@@ -1,1 +1,60 @@
 @import url(./resets.css);
+
+body {
+  overflow-x: hidden;
+  background-color: #f0efee;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Nav styles */
+ 
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+  }
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+    font-size: 18px;
+  }
+
+nav p a {
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+/*Hero*/
+
+.heroSection {
+  height: 100vh;
+}
+
+.heroSection h1, .heroSection h2 {
+  font-size: 111px;
+}
+
+.heroSection p {
+  font-size: 27px;
+  font-weight: bold;
+}
+
+/*Selected Work*/
+
+.selectedWorksSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projectArticle {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.projectArticle img {
+  border-radius: 1rem;
+}
