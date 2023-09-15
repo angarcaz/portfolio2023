@@ -1,5 +1,9 @@
 @import url(./resets.css);
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   overflow-x: hidden;
   background-color: #f0efee;
@@ -12,28 +16,24 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 0;
+    padding: 0.2rem 4rem;
+    font-size: 25px;
   }
 
 nav ul {
     display: flex;
-    gap: 1rem;
-    font-size: 18px;
+    gap: 30px;
   }
-
-nav p a {
-    font-weight: bolder;
-    font-size: 20px;
-}
 
 /*Hero*/
 
 .heroSection {
-  height: 100vh;
+  padding: 0 4rem;
 }
 
 .heroSection h1, .heroSection h2 {
   font-size: 111px;
+  line-height: 7rem;
 }
 
 .heroSection p {
@@ -44,17 +44,116 @@ nav p a {
 /*Selected Work*/
 
 .selectedWorksSection {
+  padding: 0 4rem 4rem ;
+}
+
+.selectedWorkSection h2 {
+  font-size: 70px;
+}
+
+.WorksBar {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  column-gap: 20px;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
 }
 
 .projectArticle {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+  scroll-snap-align: center;
+  min-width: 55%;
 }
 
-.projectArticle img {
+.projectArticle ul {
+  display: flex;
+  gap: 20px;
+}
+
+.projectImage {
   border-radius: 1rem;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*About component */
+.TwoColSection {
+  display: flex;
+  padding: 2em 0;
+  /* border-bottom: 1px solid black; */
+  background-color: #181819;
+  color: #f0efee;
+}
+
+.col-2 {
+  padding: 0 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* .AboutImage {
+  mix-blend-mode:;
+} */
+
+/*Education Section*/
+.educationSection {
+  padding: 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid black;
+}
+
+.educationContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  column-gap: 30px;
+}
+
+.educationContainer article {
+  /* border-bottom: 1px solid black; */
+  flex: 0 0 calc(50% - 30px); 
+  box-sizing: border-box;
+}
+
+.educationContainer article:nth-child(5n), 
+.educationContainer article:nth-child(6n) { 
+  border-bottom: none; 
+}
+
+/* Front End Work Page */
+.workPageSection {
+  padding: 2rem 4rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+}
+
+.workPageSection article {
+  flex: 0 0 calc(50%-30px);
+  box-sizing: border-box;
+}
+
+/*Footer*/
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4rem;
+    background-color: #181819;
+    color: #f0efee;
+    font-size: 20px;
+}
+
+footer ul {
+  display: flex;
+  gap: 30px;
+}
+
+footer ul a {
+  text-decoration: underline;
 }

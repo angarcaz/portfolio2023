@@ -16,38 +16,50 @@ import { BsArrowRightShort } from 'react-icons/bs'
 import '../styles/App.css';
 
 const SelectedWorks = () => {
+
+    const firstThreeProjects = Projects.lastprojects.slice(0, 3);
+
   return (
     <section className='selectedWorksSection'>
-        {Projects.lastprojects.map((work) => {
-            return (
-                <article className='projectArticle' key={JSON.stringify(work)}>
-                    <img src={work.image} alt={work.image} />
-                    <h3>{work.title}</h3>
-                    <p>{work.description}</p>
-                    <ul>
-                        {work.technologies.map((techno) => {
-                            return (
-                                <li key={techno}>
-                                    {techno === "html" ? <FaHtml5 /> :
-                                    techno === "css" ? <FaCss3Alt /> :
-                                    techno === "sass" ? <DiSass/> :
-                                    techno === "angular" ? <FaAngular /> :
-                                    techno === "react" ? <FaReact /> :
-                                    techno === "javascript" ? <SiJavascript /> :
-                                    techno === "typescript" ? <SiTypescript /> :
-                                    null
-                                    }
-                                </li>
-                            )
-                        })}
-                    </ul>
-                    <div>
-                        <a href={work.demo} target="_blank" rel="noreferrer">Demo <BsArrowRightShort/></a>
-                        <a href={work.repo} target="_blank" rel="noreferrer">Repository <BsArrowRightShort/></a>
-                    </div>
-                </article>
-            )
-        })}
+    <h2>Selection of front-end works</h2>
+    <h3>/ Browse more</h3>
+        <div className='WorksBar'>
+            {firstThreeProjects.map((work) => {
+                return (
+                    <article className='projectArticle' key={JSON.stringify(work)}>
+                        <img src={work.image} alt={work.image} className='projectImage'/>
+                        <h3>{work.title}</h3>
+                        <p>{work.description}</p>
+                        <ul>
+                            {work.technologies.map((techno) => {
+                                return (
+                                    <li key={techno}>
+                                        {techno === "html" ? <FaHtml5 /> :
+                                        techno === "css" ? <FaCss3Alt /> :
+                                        techno === "sass" ? <DiSass/> :
+                                        techno === "angular" ? <FaAngular /> :
+                                        techno === "react" ? <FaReact /> :
+                                        techno === "javascript" ? <SiJavascript /> :
+                                        techno === "typescript" ? <SiTypescript /> :
+                                        null
+                                        }
+                                    </li>
+                                )
+                            })}
+                        </ul>
+                        <div>
+                            <a href={work.demo} target="_blank" rel="noreferrer">Demo <BsArrowRightShort/></a>
+                            <a href={work.repo} target="_blank" rel="noreferrer">Repository <BsArrowRightShort/></a>
+                        </div>
+                    </article>
+                )
+            })}
+            <article className='projectArticle'>
+                <div>
+                    <h2>WATCH MORE</h2>
+                </div>
+            </article>
+            </div>
     </section>
   )
 }
