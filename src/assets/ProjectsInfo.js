@@ -1,6 +1,8 @@
-import LifeOnMarsBanner from "./img/lifeonmars-img/LOM-banner01.jpg"
-import ArtBrowserBanner from "./img/artbrowser-img/AB-banner01.jpg"
+import LifeOnMarsBanner from "./img/lifeonmars-img/LOM-banner02.jpg"
+import ArtBrowserBanner from "./img/artbrowser-img/AB-banner02.jpg"
 import SunnySideBanner from "./img/sunnyside.jpg"
+import NetflixBanner from "./img/netflix.jpg"
+import PokedexBanner from "./img/pokedex.jpg"
 
 import Trainspotting from "./img/trainspotting.jpg"
 import GrapaTinta from "./img/grapatinta.gif"
@@ -46,7 +48,7 @@ export const Projects = {
         },
         {
             title: "Netflix App",
-            image: "https://images.unsplash.com/photo-1683502640477-888de61c3ae6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80",
+            image: NetflixBanner,
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lobortis urna efficitur luctus rhoncus. Sed vitae sem vel leo aliquet pulvinar. Curabitur congue lacus in sodales euismod.",
             technologies: [
                 "html",
@@ -58,25 +60,25 @@ export const Projects = {
             repo: "https://github.com/angarcaz/netflix-app"
         },
         {
-            title: "Life on Mars",
-            image: "https://images.unsplash.com/photo-1683502640477-888de61c3ae6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80",
+            title: "Pokedex",
+            image: PokedexBanner,
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lobortis urna efficitur luctus rhoncus. Sed vitae sem vel leo aliquet pulvinar. Curabitur congue lacus in sodales euismod.",
             technologies: [
                 "html",
-                "sass",
-                "react"
+                "css",
+                "javascript"
             ],
-            demo: "https://art-browser-eta.vercel.app/",
+            demo: "https://angarcaz.github.io/pokedex/",
             repo: "https://github.com/angarcaz/gallery-react"
         },
         {
-            title: "Life on Mars",
-            image: "https://images.unsplash.com/photo-1683502640477-888de61c3ae6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80",
+            title: "Calculator",
+            image: LifeOnMarsBanner,
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lobortis urna efficitur luctus rhoncus. Sed vitae sem vel leo aliquet pulvinar. Curabitur congue lacus in sodales euismod.",
             technologies: [
                 "html",
-                "sass",
-                "react"
+                "css",
+                "javascript"
             ],
             demo: "https://art-browser-eta.vercel.app/",
             repo: "https://github.com/angarcaz/gallery-react"
