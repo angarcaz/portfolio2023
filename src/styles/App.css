@@ -47,13 +47,22 @@ nav ul {
   padding: 0 4rem 4rem ;
 }
 
-.selectedWorkSection h2 {
-  font-size: 70px;
+.h2BigSize {
+  font-size: 2em;
+}
+
+.mediumSize {
+  font-size: 1.3em;
+}
+
+.commonParagraph {
+  line-height: 2em;
 }
 
 .WorksBar {
   display: flex;
   align-items: flex-start;
+  padding: 1em 0 2em 0;
   column-gap: 20px;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
@@ -81,10 +90,13 @@ nav ul {
 .TwoColSection {
   display: flex;
   padding: 2em 0;
-  /* border-bottom: 1px solid black; */
   background-color: #181819;
   color: #f0efee;
 }
+
+/* .TwoColSection img {
+  max-width: 50%;
+} */
 
 .col-2 {
   padding: 0 4rem;
@@ -138,6 +150,72 @@ nav ul {
   box-sizing: border-box;
 }
 
+/*Page Project*/
+.pageProject {
+  margin: 0 4rem 2rem;
+  padding: 0 4rem;
+  background-color: #181819;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1rem;
+  color: #f0efee;
+}
+
+.illustrationSection {
+  padding: 4rem;
+  color: #181819;
+}
+
+
+.MainProjectImg {
+  max-width: 100%;
+  margin-bottom: 30px;
+}
+
+.MidImage {
+  max-width: 50%;
+}
+
+.illustrationSection {
+  background-color: #fff;
+}
+
+.galleryRow {
+  display: flex;
+  justify-content: center;
+  padding: 4em 2em;
+  gap: 30px;
+}
+
+.galleryCol {
+  flex: 30%;
+  max-width: 30%;
+  padding: 0 5px;
+}
+
+.galleryBig {
+  flex: 40%;
+  max-width: 40%;
+  padding: 0 5px;
+}
+
+.galleryImage {
+  width: 100%;
+  object-fit: cover;
+} 
+
+.Rounded {
+  max-width: 100%;
+  border-radius: 1em;
+}
+
+.galleryLogo {
+  margin: 0 auto;
+  width: 50%;
+}
+
 /*Footer*/
 footer {
     display: flex;
@@ -154,6 +232,6 @@ footer ul {
   gap: 30px;
 }
 
-footer ul a {
+footer ul a, .underlineLink {
   text-decoration: underline;
 }

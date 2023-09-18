@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import AboutImage from "../assets/img/about.png"
+import CvAngela from "../assets/CV_AngelaEN2023B.pdf"
 
 
 const AboutComponent = () => {
@@ -12,7 +13,7 @@ const AboutComponent = () => {
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ipsum nibh, tincidunt vitae rutrum molestie, tincidunt fringilla eros. 
             Praesent est orci, fermentum eu ultrices in, iaculis in lacus. Maecenas eget nibh quis ante ultrices tristique sed eu purus. Praesent tincidunt quam ac dolor rhoncus finibus. 
             Vestibulum vestibulum lacus ut commodo semper. Aliquam rutrum leo vitae maximus pellentesque. Maecenas interdum commodo nisi, ut dapibus elit.</p>
-            <a href="#">Download my CV</a>
+            <a href={CvAngela} className='underlineLink mediumSize'>Download my CV</a>
             </div>
         </div>
        <div className='col-2'>

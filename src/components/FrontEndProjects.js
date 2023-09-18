@@ -7,7 +7,9 @@ const FrontEndProjects = () => {
     {Projects.lastprojects.map((work) => {
                 return (
                     <article key={JSON.stringify(work)}>
-                        <img src={work.image} alt={work.image} className='projectImage'/>
+                        <a href={work.main_link} target='_blank' rel="noreferrer">
+                          <img src={work.image} alt={work.image} className='projectImage'/>
+                        </a>
                     </article>
                 )
             })}

@@ -14,22 +14,25 @@ import { BsArrowRightShort } from 'react-icons/bs'
 
 //styles
 import '../styles/App.css';
+import { Link } from 'react-router-dom';
 
 const SelectedWorks = () => {
 
-    const firstThreeProjects = Projects.lastprojects.slice(0, 3);
+    const firstThreeProjects = Projects.lastprojects.slice(0, 4);
 
   return (
     <section className='selectedWorksSection'>
-    <h2>Selection of front-end works</h2>
-    <h3>/ Browse more</h3>
+    <h2 className='h2BigSize'>Selection of front-end works</h2>
+    <Link to="/work" className='mediumSize underlineLink'>Browse more</Link>
         <div className='WorksBar'>
             {firstThreeProjects.map((work) => {
                 return (
                     <article className='projectArticle' key={JSON.stringify(work)}>
-                        <img src={work.image} alt={work.image} className='projectImage'/>
-                        <h3>{work.title}</h3>
-                        <p>{work.description}</p>
+                        <a href={work.main_link} target='_blank' rel="noreferrer">
+                            <img src={work.image} alt={work.image} className='projectImage'/>
+                        </a>
+                        <h3 className='h2BigSize'>{work.title}</h3>
+                        <p className='commonParagraph'>{work.description}</p>
                         <ul>
                             {work.technologies.map((techno) => {
                                 return (
@@ -48,17 +51,12 @@ const SelectedWorks = () => {
                             })}
                         </ul>
                         <div>
-                            <a href={work.demo} target="_blank" rel="noreferrer">Demo <BsArrowRightShort/></a>
-                            <a href={work.repo} target="_blank" rel="noreferrer">Repository <BsArrowRightShort/></a>
+                            <a href={work.demo} target="_blank" rel="noreferrer" className='underlineLink'>Demo <BsArrowRightShort/></a>
+                            <a href={work.repo} target="_blank" rel="noreferrer" className='underlineLink'>Repository <BsArrowRightShort/></a>
                         </div>
                     </article>
                 )
             })}
-            <article className='projectArticle'>
-                <div>
-                    <h2>WATCH MORE</h2>
-                </div>
-            </article>
             </div>
     </section>
   )
