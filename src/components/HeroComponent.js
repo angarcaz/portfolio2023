@@ -4,8 +4,7 @@ import '../styles/App.css';
 const HeroComponent = () => {
   return (
     <section className='heroSection'>
-    <h1> </h1>
-        <h2>GRAPHIC DESIGNER & FRONT END DEVELOPER</h2>
+      <h2>Hi there! I'm a GRAPHIC DESIGNER & FRONT END DEVELOPER</h2>
     </section>
   )
 }

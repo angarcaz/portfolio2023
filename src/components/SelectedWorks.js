@@ -25,6 +25,9 @@ const SelectedWorks = () => {
     <h2 className='h2BigSize'>Selection of front-end works</h2>
     <Link to="/work" className='mediumSize underlineLink'>Browse more</Link>
         <div className='WorksBar'>
+            <button className="prev">
+            <i className="fa fa-angle-left"></i> 
+            </button>
             {firstThreeProjects.map((work) => {
                 return (
                     <article className='projectArticle' key={JSON.stringify(work)}>
@@ -57,6 +60,9 @@ const SelectedWorks = () => {
                     </article>
                 )
             })}
+            <button className="next">
+            <i className="fa fa-angle-right"></i> 
+    </button>
             </div>
     </section>
   )

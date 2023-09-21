@@ -10,9 +10,9 @@ const AboutComponent = () => {
         <div className='col-2'>
             <h2>Hello! I'm a graphic designer & a front-end developer wannabe</h2>
             <div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ipsum nibh, tincidunt vitae rutrum molestie, tincidunt fringilla eros. 
+            {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ipsum nibh, tincidunt vitae rutrum molestie, tincidunt fringilla eros. 
             Praesent est orci, fermentum eu ultrices in, iaculis in lacus. Maecenas eget nibh quis ante ultrices tristique sed eu purus. Praesent tincidunt quam ac dolor rhoncus finibus. 
-            Vestibulum vestibulum lacus ut commodo semper. Aliquam rutrum leo vitae maximus pellentesque. Maecenas interdum commodo nisi, ut dapibus elit.</p>
+            Vestibulum vestibulum lacus ut commodo semper. Aliquam rutrum leo vitae maximus pellentesque. Maecenas interdum commodo nisi, ut dapibus elit.</p> */}
             <a href={CvAngela} className='underlineLink mediumSize'>Download my CV</a>
             </div>
         </div>
