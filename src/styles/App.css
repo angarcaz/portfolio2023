@@ -59,15 +59,18 @@ nav ul {
   line-height: 2em;
 }
 
+.navigationBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .WorksBar {
   display: flex;
   align-items: flex-start;
   padding: 1em 0 2em 0;
   column-gap: 20px;
-  overflow-x: scroll;
   width: 100%;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
 }
 
 .projectArticle {
@@ -236,3 +239,18 @@ footer ul {
 footer ul a, .underlineLink {
   text-decoration: underline;
 }
+
+/* Swiper buttons */
+.custom-swiper-button-next , .custom-swiper-button-prev,
+.custom-swiperB-button-next, .custom-swiperB-button-prev {
+  background-color: none;
+  border: none;
+  cursor: pointer;
+}
+
+.iconB, .iconA {
+  font-size: 30px;
+}
+
+
+
