@@ -49,7 +49,7 @@ export const Projects = {
             title: "Life on Mars",
             subtitle: "Mars Homes Web Application",
             image: LifeOnMarsBanner,
-            description: "Have you ever imagined living on Mars? Life on Mars is a web application that allows users to explore and customize Martian homes. Users can register, add their favorite houses to their wishlists, and personalize them by choosing the number of rooms, whether they want a garden, and more. This project was built using React and Redux, incorporating user registration functionality and custom JSON data handling.",
+            description: "Have you ever imagined living on Mars? Life on Mars is a web application that allows users to explore and customize Martian homes. Users can register, add their favorite houses to their wishlists, and personalize them. This project was built using React and Redux, incorporating user registration functionality and custom JSON data handling.",
             technologies: [
                 "html",
                 "sass",
@@ -104,7 +104,7 @@ export const Projects = {
         {
             title: "Pokedex",
             image: PokedexBanner,
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lobortis urna efficitur luctus rhoncus. Sed vitae sem vel leo aliquet pulvinar. Curabitur congue lacus in sodales euismod.",
+            description: "I am excited to introduce my very first JavaScript project, where I have embarked on a journey to create a Pokédex using the Pokémon API. This project is not only a fantastic learning opportunity but also a chance for me to dive into the fascinating world of Pokémon and web development. In this project, I aim to showcase my growing skills in JavaScript and create a user-friendly Pokédex for all Pokémon enthusiasts.",
             technologies: [
                 "html",
                 "css",
@@ -117,7 +117,7 @@ export const Projects = {
         {
             title: "Calculator",
             image: CalculatorBanner,
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lobortis urna efficitur luctus rhoncus. Sed vitae sem vel leo aliquet pulvinar. Curabitur congue lacus in sodales euismod.",
+            description: "This simple calculator project may not be the most complex application, but it's practical and serves its purpose well and it's been a great way for me to practice my JavaScript skills.",
             technologies: [
                 "html",
                 "css",

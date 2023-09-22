@@ -5,12 +5,12 @@ const WorkEducationComponent = () => {
   return (
     <>
     <section className='educationSection'>
-    <h2>Experience.</h2>
+    <h2 className='h2BigSize'>Experience.</h2>
         <div className='educationContainer'>
             {CV.experience.map((ex) => {
                 return (
-                    <article key={JSON.stringify(ex.title)}>
-                        <h3>{ex.title}</h3>
+                    <article className='educationItem' key={JSON.stringify(ex.title)}>
+                        <h3 className='mediumSize'>{ex.title}</h3>
                         <p>{ex.date}</p>
                         <p>{ex.where}</p>
                         <ul>
@@ -24,12 +24,12 @@ const WorkEducationComponent = () => {
         </div>
     </section>
     <section className='educationSection'>
-    <h2>Education.</h2>
+    <h2 className='h2BigSize'>Education.</h2>
         <div className='educationContainer'>
             {CV.education.map((ed) => {
                 return (
-                    <article key={JSON.stringify(ed.title)}>
-                        <h3>{ed.title}</h3>
+                    <article className='educationItem' key={JSON.stringify(ed.title)}>
+                        <h3 className='mediumSize'>{ed.title}</h3>
                         <p>{ed.date}</p>
                         <p>{ed.institution}</p>
                     </article>

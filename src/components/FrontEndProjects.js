@@ -17,7 +17,7 @@ const FrontEndProjects = () => {
     const articles = document.querySelectorAll('.project-article');
     
     articles.forEach((article, index) => {
-      article.style.animationDelay = `${0.3 * index}s`;
+      article.style.animationDelay = `${0.4 * index}s`;
     });
   }, []);
 
@@ -57,7 +57,8 @@ const FrontEndProjects = () => {
                         )
                     })}
                 </ul>
-                <a href={work.demo} target="_blank" rel="noreferrer" className='mediumSize underlineLink'>See more</a>
+                <a href={work.demo} target="_blank" rel="noreferrer" className='mediumSize underlineLink'>Demo</a>
+                <a href={work.demo} target="_blank" rel="noreferrer" className='mediumSize underlineLink'>Repo</a>
               </div>
             
           </article>

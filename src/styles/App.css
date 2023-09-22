@@ -89,17 +89,22 @@ nav ul {
 
 /*Education Section*/
 .educationSection {
-  padding: 2rem 4rem;
+  padding: 2.5rem 4rem;
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid black;
+  gap: 2rem;
 }
 
 .educationContainer {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  column-gap: 30px;
+  padding: 1rem 0 0 0;
+}
+
+.educationItem {
+  margin: 0 0 2rem 0;
 }
 
 .educationContainer article {

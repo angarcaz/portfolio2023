@@ -25,7 +25,7 @@ export const CV = {
             city: "Barcelona"
         },
         {
-            title: "Advanced specific vocational training: Engraving and printing techniques",
+            title: "Engraving and printing techniques",
             institution: "EASD Llotja",
             date: "2014 - 2018",
             city: "Barcelona"
