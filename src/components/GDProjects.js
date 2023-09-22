@@ -1,9 +1,17 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Projects } from '../assets/ProjectsInfo';
 import { Link } from 'react-router-dom';
 
 const GDProjects = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
+
+  useEffect(() => {
+    const articles = document.querySelectorAll('.project-article');
+    
+    articles.forEach((article, index) => {
+      article.style.animationDelay = `${0.6 * index}s`;
+    });
+  }, []);
 
   return (
     <section className='workPageSection'>
@@ -13,7 +21,7 @@ const GDProjects = () => {
         return (
           <article
             key={JSON.stringify(work)}
-            className={`project-article ${isHovered ? 'hovered' : ''}`}
+            className={`project-article fade-in-fwd ${isHovered ? 'hovered' : ''}`}
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
           >

@@ -35,10 +35,13 @@ const SelectedWorks = () => {
 
     const firstThreeProjects = Projects.lastprojects.slice(0, 4);
     const [swiperRef, setSwiperRef] = useState(null);
+    const [hoveredIndex, setHoveredIndex] = useState(null);
+    const [hoveredIndexB, setHoveredIndexB] = useState(null);
 
   return (
+    <>
     <section className='selectedWorksSection'>
-    <h2 className='h2BigSize'>Selection of front-end works</h2>
+    <h2 className='h2BMaxSize'>Selection of front-end works</h2>
     <div className='navigationBox'>
         <Link to="/work" className='mediumSize underlineLink'>Browse more</Link>
         <div className='navigationButtons'>
@@ -50,7 +53,7 @@ const SelectedWorks = () => {
             <Swiper
             onSwiper={setSwiperRef}
             slidesPerView={2.3}
-            spaceBetween={30}
+            spaceBetween={40}
             freeMode={true}
             navigation={{
                 nextEl: '.custom-swiper-button-next',
@@ -62,35 +65,47 @@ const SelectedWorks = () => {
             modules={[Navigation]}
             className="mySwiper"
         >
-            {firstThreeProjects.map((work) => {
+            {firstThreeProjects.map((work, index) => {
+                const isHovered = hoveredIndex === index;
                 return (
                     <SwiperSlide>
-                    <article className='projectArticle' key={JSON.stringify(work)}>
-                        <a href={work.main_link} target='_blank' rel="noreferrer">
-                            <img src={work.image} alt={work.image} className='projectImage'/>
-                        </a>
-                        <h3 className='h2BigSize'>{work.title}</h3>
-                        <p className='commonParagraph'>{work.description}</p>
-                        <ul>
-                            {work.technologies.map((techno) => {
-                                return (
-                                    <li key={techno}>
-                                        {techno === "html" ? <FaHtml5 /> :
-                                        techno === "css" ? <FaCss3Alt /> :
-                                        techno === "sass" ? <DiSass/> :
-                                        techno === "angular" ? <FaAngular /> :
-                                        techno === "react" ? <FaReact /> :
-                                        techno === "javascript" ? <SiJavascript /> :
-                                        techno === "typescript" ? <SiTypescript /> :
-                                        null
-                                        }
-                                    </li>
-                                )
-                            })}
-                        </ul>
-                        <div>
-                            <a href={work.demo} target="_blank" rel="noreferrer" className='underlineLink'>Demo <BsArrowRightShort/></a>
-                            <a href={work.repo} target="_blank" rel="noreferrer" className='underlineLink'>Repository <BsArrowRightShort/></a>
+                    <article
+                    key={JSON.stringify(work)}
+                    className={`projectArticle ${isHovered ? 'hovered' : ''}`}
+                    onMouseEnter={() => setHoveredIndex(index)}
+                    onMouseLeave={() => setHoveredIndex(null)}
+                    >
+                        <div className='project-article'>
+                        <img src={work.image} alt={work.image} className='projectImage'/>
+                            <div className={`hover-article ${isHovered ? 'slide-in-bottom' : 'slide-out-bottom'}`}>
+                            <p>{work.description}</p>
+                            <a href={work.demo} target="_blank" rel="noreferrer" className='mediumSize underlineLink'>Demo</a>
+                            <a href={work.demo} target="_blank" rel="noreferrer" className='mediumSize underlineLink'>Repo</a>
+                            </div>
+                        </div>
+                       
+                        <div className='projectArticleInfoContainer'>
+                            <header>
+                                <h3 className='h2BigSize'>{work.title}</h3>
+                                <h4 className='mediumSize'>{work.subtitle}</h4>
+                            </header>
+                            <ul>
+                                {work.technologies.map((techno) => {
+                                    return (
+                                        <li key={techno} className='technoIcons'>
+                                            {techno === "html" ? <FaHtml5 /> :
+                                            techno === "css" ? <FaCss3Alt /> :
+                                            techno === "sass" ? <DiSass/> :
+                                            techno === "angular" ? <FaAngular /> :
+                                            techno === "react" ? <FaReact /> :
+                                            techno === "javascript" ? <SiJavascript /> :
+                                            techno === "typescript" ? <SiTypescript /> :
+                                            null
+                                            }
+                                        </li>
+                                    )
+                                })}
+                            </ul>
                         </div>
                     </article>
                     </SwiperSlide>
@@ -98,8 +113,9 @@ const SelectedWorks = () => {
             })}
             </Swiper>
             </div>
-
-    <h2 className='h2BigSize'>Selection of graphic design works</h2>
+        </section>
+    <section className='selectedWorksSection'>  
+    <h2 className='h2BMaxSize'>Selection of graphic design works</h2>
     <div className='navigationBox'>
         <Link to="/work" className='mediumSize underlineLink'>Browse more</Link>
         <div className='navigationButtons'>
@@ -123,16 +139,30 @@ const SelectedWorks = () => {
             modules={[Navigation]}
             className="mySwiper"
         >
-            {Projects.gdprojects.map((project) => {
+            {Projects.gdprojects.map((project, index) => {
+                const isHoveredB = hoveredIndexB === index;
                 return (
                     <SwiperSlide>
-                    <article className='projectArticle' key={JSON.stringify(project)}>
-                        <Link to={project.route}>
+                    <article
+                    key={JSON.stringify(project)}
+                    className={`projectArticle ${isHoveredB ? 'hovered' : ''}`}
+                    onMouseEnter={() => setHoveredIndexB(index)}
+                    onMouseLeave={() => setHoveredIndexB(null)}
+                    >
+                        <div className='project-article'>
                             <img src={project.image} alt={project.image} className='projectImage' />
-                        </Link>
-                        <h3 className='h2BigSize'>{project.title}</h3>
-                        <p className='commonParagraph'>{project.description}</p>
-                        <Link to={project.route} className='underlineLink'>Watch more <BsArrowRightShort/></Link>
+                            <div className={`hover-article ${isHoveredB ? 'slide-in-bottom' : 'slide-out-bottom'}`}>
+                            <p>{project.description}</p>
+                            <Link to={project.route} className='mediumSize underlineLink'>Watch more</Link>
+                            </div>
+                        </div>
+                        
+                        <div className='projectArticleInfoContainer'>
+                            <header>
+                                <h3 className='h2BigSize'>{project.title}</h3>
+                                <h4 className='mediumSize'>{project.subtitle}</h4>
+                            </header>
+                        </div>
                     </article>
                     </SwiperSlide>
                 )
@@ -140,6 +170,7 @@ const SelectedWorks = () => {
             </Swiper>
             </div>
     </section>
+    </>
   )
 }
 
