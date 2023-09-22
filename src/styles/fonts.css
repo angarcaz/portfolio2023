@@ -1,0 +1,30 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.heroSection h1, .heroSection h2 {
+    font-size: 111px;
+    line-height: 7rem;
+  }
+
+.h2BigSize {
+    font-size: 2em;
+    margin: 0;
+  }
+  
+.mediumSize {
+    font-size: 1.3em;
+    margin: 0;
+  }
+  
+.commonParagraph {
+    line-height: 2em;
+  }
+
+.iconB, .iconA {
+    font-size: 30px;
+  }
+
+footer ul a, .underlineLink {
+    text-decoration: underline;
+  }

@@ -1,4 +1,6 @@
 @import url(./resets.css);
+@import url(./animations.css);
+@import url(./fonts.css);
 
 html {
   scroll-behavior: smooth;
@@ -7,7 +9,6 @@ html {
 body {
   overflow-x: hidden;
   background-color: #f0efee;
-  font-family: 'Inter', sans-serif;
 }
 
 /* Nav styles */
@@ -31,32 +32,11 @@ nav ul {
   padding: 6rem 4rem 0 4rem;
 }
 
-.heroSection h1, .heroSection h2 {
-  font-size: 111px;
-  line-height: 7rem;
-}
-
-.heroSection p {
-  font-size: 27px;
-  font-weight: bold;
-}
 
 /*Selected Work*/
 
 .selectedWorksSection {
   padding: 0 4rem 4rem ;
-}
-
-.h2BigSize {
-  font-size: 2em;
-}
-
-.mediumSize {
-  font-size: 1.3em;
-}
-
-.commonParagraph {
-  line-height: 2em;
 }
 
 .navigationBox {
@@ -76,11 +56,13 @@ nav ul {
 .projectArticle {
   scroll-snap-align: center;
   min-width: 55%;
+  box-sizing: border-box;
 }
 
-.projectArticle ul {
+.projectArticle ul, .hover-article ul {
   display: flex;
   gap: 20px;
+  margin: 0;
 }
 
 .projectImage {
@@ -98,20 +80,12 @@ nav ul {
   color: #f0efee;
 }
 
-/* .TwoColSection img {
-  max-width: 50%;
-} */
-
 .col-2 {
   padding: 0 4rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-
-/* .AboutImage {
-  mix-blend-mode:;
-} */
 
 /*Education Section*/
 .educationSection {
@@ -129,7 +103,6 @@ nav ul {
 }
 
 .educationContainer article {
-  /* border-bottom: 1px solid black; */
   flex: 0 0 calc(50% - 30px); 
   box-sizing: border-box;
 }
@@ -152,6 +125,27 @@ nav ul {
 .workPageSection article {
   flex: 0 0 calc(50%-30px);
   box-sizing: border-box;
+}
+
+.activeButton {
+  color: #181819;
+}
+
+.inactiveButton {
+  color: #ACACAB;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 4rem;
+}
+
+.buttonContainer button {
+  background-color: none;
+  border: none;
+  cursor: pointer;
 }
 
 /*Page Project*/
@@ -236,10 +230,6 @@ footer ul {
   gap: 30px;
 }
 
-footer ul a, .underlineLink {
-  text-decoration: underline;
-}
-
 /* Swiper buttons */
 .custom-swiper-button-next , .custom-swiper-button-prev,
 .custom-swiperB-button-next, .custom-swiperB-button-prev {
@@ -248,9 +238,35 @@ footer ul a, .underlineLink {
   cursor: pointer;
 }
 
-.iconB, .iconA {
-  font-size: 30px;
+
+/*hover */
+
+.project-article {
+  position: relative;
+  border-radius: 1rem;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
+.hover-article {
+  background-color: #181819;
+  border-radius: 1rem;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #f0efee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  padding: 1rem 3rem;
+}
 
-
+.line {
+  width: 100%;
+  height: 3px;
+  background-color: #f0efee;
+}
