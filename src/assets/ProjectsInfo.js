@@ -89,8 +89,9 @@ export const Projects = {
         },
         {
             title: "Netflix App",
+            subtitle: "Recreation of the Netflix User Interface with Angular",
             image: NetflixBanner,
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lobortis urna efficitur luctus rhoncus. Sed vitae sem vel leo aliquet pulvinar. Curabitur congue lacus in sodales euismod.",
+            description: "This is my first project using a programming framework. I recreated the Netflix user interface using Angular.",
             technologies: [
                 "html",
                 "css",

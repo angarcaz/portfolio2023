@@ -5,6 +5,7 @@ body {
 .heroSection h1, .heroSection h2 {
     font-size: 111px;
     line-height: 7rem;
+    margin-bottom: 0;
   }
 
 .h2BMaxSize {
@@ -54,4 +55,8 @@ footer ul a, .underlineLink {
 
 .projectArticleInfoContainer ul {
     padding: 0 0 1.4rem;
+}
+
+.italic {
+  font-style: italic;
 }

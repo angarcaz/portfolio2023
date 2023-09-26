@@ -49,18 +49,21 @@ export const CV = {
                 "Prototyping and interface design",
                 "Corporate documents design and layout",
                 "Social media content"
-            ]
+            ],
+            technologies: ["Adobe Photoshop", "Adobe Illustrator", "Adobe inDesign", "Adobe Xd", "Figma", "HTML5", "CSS", "Wordpress",]
         },
         {
             title: "Reprography operator",
-            where: "Alfambra",
+            where: "Alfambra Copisteria",
             city: "Barcelona",
             date: "2017-2019",
             tasks: [
                 "Advanced copyshop services",
                 "Gluing and bookbinding work",
-                "Grpahic pieces design and layout"
-            ]
+                "Graphic pieces design and layout",
+                "Graphic pieces design and layout"
+            ],
+            technologies: ["Adobe Photoshop", "Adobe Illustrator", "Adobe inDesign"]
         }
     ],
 
@@ -101,6 +104,27 @@ export const CV = {
         {
             name: "Adobe inDesign"
         },
+    ],
+
+    soft_skills: [
+        {
+            name: "Communication"
+        },
+        {
+            name: "Creativity"
+        },
+        {
+            name: "Teamwork"
+        },
+        {
+            name: "Problem-solving"
+        },
+        {
+            name: "Adaptability"
+        },
+        {
+            name: "Attention to Detail"
+        }
     ],
 
     languages: [
